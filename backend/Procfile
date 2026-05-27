@@ -1,0 +1,2 @@
+release: python manage.py migrate && python manage.py seed_factors && python manage.py create_demo
+web: gunicorn config.wsgi:application --bind 0.0.0.0:$PORT --workers 2 --timeout 120
