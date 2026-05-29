@@ -62,8 +62,18 @@ def _set_jwt_cookies(response, refresh_token):
 
 def _clear_jwt_cookies(response):
     jwt_settings = settings.SIMPLE_JWT
-    response.delete_cookie(jwt_settings.get("AUTH_COOKIE", "access_token"))
-    response.delete_cookie(jwt_settings.get("AUTH_COOKIE_REFRESH", "refresh_token"))
+    samesite = jwt_settings.get("AUTH_COOKIE_SAMESITE", "Lax")
+    secure = jwt_settings.get("AUTH_COOKIE_SECURE", False)
+    response.delete_cookie(
+        jwt_settings.get("AUTH_COOKIE", "access_token"),
+        path="/",
+        samesite=samesite,
+    )
+    response.delete_cookie(
+        jwt_settings.get("AUTH_COOKIE_REFRESH", "refresh_token"),
+        path="/",
+        samesite=samesite,
+    )
 
 
 class HealthView(APIView):
@@ -135,6 +145,8 @@ class RefreshView(APIView):
 
 
 class LogoutView(APIView):
+    permission_classes = [AllowAny]
+
     def post(self, request):
         refresh_token = request.COOKIES.get(
             settings.SIMPLE_JWT.get("AUTH_COOKIE_REFRESH", "refresh_token")
