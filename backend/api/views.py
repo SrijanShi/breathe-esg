@@ -209,7 +209,7 @@ class ScopeBreakdownView(APIView):
 
     def get(self, request):
         org = request.user.organization
-        months_back = int(request.query_params.get("months", 6))
+        months_back = int(request.query_params.get("months", 36))
 
         from django.db.models.functions import TruncMonth
         cutoff = timezone.now() - timedelta(days=months_back * 30)

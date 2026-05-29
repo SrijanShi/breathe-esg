@@ -161,7 +161,7 @@ export function DashboardPage() {
           <div className="flex items-center justify-between mb-4">
             <div>
               <h2 className="text-sm font-semibold text-slate-900">Emissions by Scope</h2>
-              <p className="text-xs text-slate-400 mt-0.5">Last 6 months · tCO₂e</p>
+              <p className="text-xs text-slate-400 mt-0.5">Last 36 months · tCO₂e</p>
             </div>
           </div>
           {breakdown && breakdown.length > 0 ? (
