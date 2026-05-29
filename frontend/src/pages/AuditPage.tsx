@@ -30,7 +30,7 @@ const ACTION_COLORS: Record<string, string> = {
 }
 
 export function AuditPage() {
-  const [action, setAction] = useState('analyst')
+  const [action, setAction] = useState('all')
   const [cursor, setCursor] = useState<string | undefined>()
   const [cursorStack, setCursorStack] = useState<string[]>([])
 
@@ -79,7 +79,8 @@ export function AuditPage() {
           onChange={e => { setAction(e.target.value); setCursor(undefined); setCursorStack([]) }}
           className="h-9 px-3 pr-8 text-sm rounded-lg border border-slate-200 bg-white text-slate-700 focus:outline-none focus:ring-2 focus:ring-emerald-500/30"
         >
-          <option value="analyst">Analyst actions</option>
+          <option value="all">All actions</option>
+          <option value="analyst">Analyst actions only</option>
           <option value="approved">Approved</option>
           <option value="rejected">Rejected</option>
           <option value="batch_approved">Bulk approved</option>
@@ -88,7 +89,6 @@ export function AuditPage() {
           <option value="edited">Edited</option>
           <option value="locked">Locked</option>
           <option value="created">Ingestion (created)</option>
-          <option value="all">All (including ingestion)</option>
         </select>
       </div>
 
