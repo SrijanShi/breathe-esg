@@ -80,7 +80,7 @@ export function DashboardPage() {
 
   const { data: breakdown } = useQuery({
     queryKey: ['scope-breakdown'],
-    queryFn: () => getScopeBreakdown(6).then((r) => r.data),
+    queryFn: () => getScopeBreakdown(36).then((r) => r.data),
   })
 
   const { data: batches } = useQuery({
