@@ -70,9 +70,34 @@ def _haversine_km(lat1: float, lon1: float, lat2: float, lon2: float) -> float:
     return 2 * R * math.atan2(math.sqrt(a), math.sqrt(1 - a))
 
 
+CITY_NAME_TO_CODE: dict[str, str] = {
+    "NEW YORK": "NYC", "LOS ANGELES": "LAX", "CHICAGO": "CHI", "LONDON": "LON",
+    "PARIS": "PAR", "FRANKFURT": "FRA", "SINGAPORE": "SIN", "HONG KONG": "HKG",
+    "TOKYO": "TOK", "SYDNEY": "SYD", "DUBAI": "DXB", "AMSTERDAM": "AMS",
+    "TORONTO": "YYZ", "VANCOUVER": "YVR", "MONTREAL": "YUL", "BEIJING": "BEI",
+    "SHANGHAI": "SHA", "MUMBAI": "MUM", "DELHI": "DEL", "SEOUL": "ICN",
+    "BANGKOK": "BKK", "KUALA LUMPUR": "KUL", "JAKARTA": "CGK", "MANILA": "MNL",
+    "SAO PAULO": "SAO", "BOGOTA": "BOG", "SANTIAGO": "SCL", "MEXICO CITY": "MEX",
+    "JOHANNESBURG": "JNB", "NAIROBI": "NBO", "CAIRO": "CAI", "ISTANBUL": "IST",
+    "MADRID": "MAD", "BARCELONA": "BCN", "ROME": "ROM", "MILAN": "MXP",
+    "ZURICH": "ZRH", "VIENNA": "VIE", "OSLO": "OSL", "STOCKHOLM": "ARN",
+    "COPENHAGEN": "CPH", "HELSINKI": "HEL", "BRUSSELS": "BRU", "DUBLIN": "DUB",
+    "MANCHESTER": "MAN", "BOSTON": "BOS", "SAN FRANCISCO": "SFO", "SEATTLE": "SEA",
+    "MIAMI": "MIA", "DALLAS": "DFW", "HOUSTON": "IAH", "ATLANTA": "ATL",
+    "DENVER": "DEN", "PHOENIX": "PHX", "DOHA": "DOH", "ABU DHABI": "AUH",
+}
+
+
+def _resolve_city(name: str) -> str:
+    upper = name.strip().upper()
+    if upper in CITY_NAME_TO_CODE:
+        return CITY_NAME_TO_CODE[upper]
+    return upper[:3]
+
+
 def _city_distance_km(origin: str, destination: str) -> float | None:
-    o = origin.strip().upper()[:3]
-    d = destination.strip().upper()[:3]
+    o = _resolve_city(origin)
+    d = _resolve_city(destination)
     if o in CITY_COORDS and d in CITY_COORDS:
         lat1, lon1 = CITY_COORDS[o]
         lat2, lon2 = CITY_COORDS[d]
