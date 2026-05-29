@@ -1,0 +1,36 @@
+Report ID,Transaction Date,Expense Type,Merchant Name,Amount,Currency,Origin City,Destination City,Distance,Distance Unit,Class,Nights,Employee ID
+RPT-2024-0301,2024-03-04,Airfare,Delta Air Lines,485.00,USD,New York,London,,km,Economy,,EMP-1042
+RPT-2024-0301,2024-03-04,Hotel,Marriott Canary Wharf,320.00,GBP,,,,,,,EMP-1042
+RPT-2024-0302,2024-03-05,Airfare,United Airlines,620.00,USD,San Francisco,Tokyo,,km,Business,,EMP-1107
+RPT-2024-0302,2024-03-05,Hotel,Hilton Tokyo,28000.00,JPY,,,,,,,EMP-1107
+RPT-2024-0303,2024-03-07,Airfare,American Airlines,312.00,USD,Chicago,Miami,2198,km,Economy,,EMP-2031
+RPT-2024-0303,2024-03-07,Hotel,Hyatt Miami,189.00,USD,,,,,,,EMP-2031
+RPT-2024-0304,2024-03-08,Airfare,Lufthansa,890.00,USD,New York,Frankfurt,,km,Business,,EMP-1042
+RPT-2024-0304,2024-03-08,Hotel,Marriott Frankfurt,195.00,EUR,,,,,,,EMP-1042
+RPT-2024-0305,2024-03-11,Rail,Amtrak,95.00,USD,New York,Washington DC,362,km,Economy,,EMP-3015
+RPT-2024-0306,2024-03-12,Airfare,British Airways,540.00,USD,Boston,London,,km,Economy,,EMP-1108
+RPT-2024-0306,2024-03-12,Hotel,IHG Kensington,280.00,GBP,,,,,,,EMP-1108
+RPT-2024-0307,2024-03-14,Airfare,Singapore Airlines,1850.00,USD,Los Angeles,Singapore,,km,Business,,EMP-2045
+RPT-2024-0307,2024-03-14,Hotel,Marina Bay Sands,420.00,SGD,,,,,,,EMP-2045
+RPT-2024-0308,2024-03-15,Airfare,Southwest Airlines,218.00,USD,Dallas,Denver,1425,km,Economy,,EMP-3088
+RPT-2024-0309,2024-03-18,Rail,Eurostar,145.00,EUR,London,Paris,493,km,Economy,,EMP-1042
+RPT-2024-0310,2024-03-19,Airfare,Air Canada,375.00,USD,New York,Toronto,,km,Economy,,EMP-2031
+RPT-2024-0310,2024-03-19,Hotel,Westin Toronto,195.00,CAD,,,,,,,EMP-2031
+RPT-2024-0311,2024-03-21,Airfare,Emirates,4200.00,USD,New York,Dubai,,km,First,,EMP-1001
+RPT-2024-0311,2024-03-21,Hotel,Atlantis The Palm,950.00,AED,,,,,,,EMP-1001
+RPT-2024-0312,2024-03-25,Airfare,JetBlue,189.00,USD,Boston,Miami,2100,km,Economy,,EMP-3015
+RPT-2024-0313,2024-03-26,Rail,TGV,89.00,EUR,Paris,Lyon,465,km,Economy,,EMP-1108
+RPT-2024-0314,2024-03-28,Airfare,Alaska Airlines,295.00,USD,Seattle,San Francisco,1094,km,Economy,,EMP-2045
+RPT-2024-0315,2024-04-02,Airfare,Delta Air Lines,520.00,USD,Atlanta,New York,1378,km,Economy,,EMP-3088
+RPT-2024-0316,2024-04-03,Airfare,United Airlines,780.00,USD,San Francisco,London,,km,Business,,EMP-1107
+RPT-2024-0316,2024-04-03,Hotel,Crowne Plaza Heathrow,175.00,GBP,,,,,,,EMP-1107
+RPT-2024-0317,2024-04-05,Rail,Amtrak,110.00,USD,New York,Philadelphia,151,km,Economy,,EMP-1042
+RPT-2024-0318,2024-04-08,Airfare,Air France,670.00,USD,New York,Paris,,km,Economy,,EMP-2031
+RPT-2024-0318,2024-04-08,Hotel,Sofitel Paris,310.00,EUR,,,,,,,EMP-2031
+RPT-2024-0319,2024-04-10,Airfare,Qantas,3200.00,USD,Los Angeles,Sydney,,km,Business,,EMP-1001
+RPT-2024-0319,2024-04-10,Hotel,Four Seasons Sydney,520.00,AUD,,,,,,,EMP-1001
+RPT-2024-0320,2024-04-12,Airfare,Spirit Airlines,99.00,USD,Chicago,Orlando,1855,km,Economy,,EMP-3015
+RPT-2024-0321,2024-04-15,Rail,TGV,75.00,EUR,Paris,Brussels,312,km,Economy,,EMP-1108
+RPT-2024-0322,2024-04-17,Airfare,KLM,695.00,USD,Boston,Amsterdam,,km,Economy,,EMP-2045
+RPT-2024-0322,2024-04-17,Hotel,NH Amsterdam,165.00,EUR,,,,,,,EMP-2045
+RPT-2024-0323,2024-04-19,Airfare,American Airlines,415.00,USD,Miami,Los Angeles,3756,km,Economy,,EMP-3088
